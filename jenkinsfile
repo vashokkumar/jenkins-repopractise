@@ -1,0 +1,9 @@
+node('UBUNTU') {
+    stage('VCS') {
+    git 'https://github.com/vashokkumar/jenkins-repopractise.git'
+    }
+    
+    stage('package'){
+        sh 'mvn package'
+    }
+}
